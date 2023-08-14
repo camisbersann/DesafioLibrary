@@ -5,6 +5,7 @@ class Book {
         this.pages = pages;
     }
 
+    // Pegar titulo do livro
     getBookTitle() {
         return this.book
     }
@@ -19,10 +20,12 @@ class User {
         this.booksBorrowed = []
     }
 
+    // Alugar um livro
     getBookBorrowed(book) {
         this.booksBorrowed.push(book)
     }
 
+    // Pegar o titulo de todos os livros emprestados
     allMyBooksBorrowed() {
         console.log(`${this.name} alugou os livros :`)
         this.booksBorrowed.forEach(book => {
@@ -45,14 +48,17 @@ class Library {
         this.books = []
     }
 
+    // Adicionar livro
     addBook(book) {
         this.books.push(book);
     }
 
+    // Adicionar usuario
     addUser(user) {
         this.users.push(user);
     }
 
+    // Pegar os livros alugados por pessoa
     getBooksForUser() {
         this.users.forEach(user => {
             if(user.name != undefined) {
@@ -62,6 +68,7 @@ class Library {
         });
     }
 
+    // Pegar todos os titulos da biblioteca
     getBooksFromLibrary() {
         this.books.forEach(book => {
             if(book.title != undefined) {
@@ -72,13 +79,17 @@ class Library {
 
 }
 
+// Livros que existem
 const book1 = new Book('Harry Potter', 'J. K. Rowling', '300')
 const book2 = new Book('Harry Potter 2', 'J. K. Rowling', '300')
 const book3 = new Book('Harry Potter 3', 'J. K. Rowling', '300')
 const book4 = new Book('Harry Potter 4', 'J. K. Rowling', '300')
 
+// Usuarios de existem
 const user1 = new User('Rafael Cumpri', '18')
 const user2 = new User('Camila Bersan', '16')
+
+// Biblioteca existente 
 const library1 = new Library()
 
 
