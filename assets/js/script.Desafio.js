@@ -62,6 +62,14 @@ class Library {
         });
     }
 
+    getBooksFromLibrary() {
+        this.books.forEach(book => {
+            if(book.title != undefined) {
+                return console.log(book.title)
+            }
+        })
+    }
+
 }
 
 const book1 = new Book('Harry Potter', 'J. K. Rowling', '300')
@@ -95,4 +103,5 @@ user1.getBookBorrowed(book2)
 user2.getBookBorrowed(book3)
 user2.getBookBorrowed(book4)
 
+// pegando de dentro da livraria os usuarios e os livros anexados
 console.log(library1.getBooksForUser())
